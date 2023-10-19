@@ -1,4 +1,4 @@
-number = gets.chomp_i
+number = gets.chomp.to_i
 puts "好きな数値を入力してください：#{number}"
 puts"2倍の数値です：#{number * 2}"
 
