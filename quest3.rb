@@ -305,6 +305,19 @@ puts fibonacci(30) # => 832040
 
 
 
+#viii.[Ruby][Level2] ブロックを使った配列の処理ができる(advanced)
+
+#1. each
+#従業員の名前がID順に配列で渡されるので、IDと従業員の名前をセットにして出力する print_names 関数を定義してください。
+#なお、each メソッドと with_index メソッドを使うようにしてください。
+
+def print_names(names)
+    names = ["りんご", "みかん", "いちご"]
+    names.each_with_index do |item, i|
+    puts"#{i}.#{item}"
+
+end
+print_names(['上田', '田仲', '堀田'])
 
 
 

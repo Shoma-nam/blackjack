@@ -19,7 +19,7 @@ else
     puts "1 ≦ n ≦ 10の条件を満たしていません"
 end
 
-
+#paiza D問題挑戦 10/19(木)
 #③
 #自分のコード↓
 def discount(num)
@@ -45,3 +45,13 @@ else
     puts p
 end
 
+#paiza D問題挑戦 10/20(金)
+#④
+n1 = gets.chomp
+n2 = gets.chomp
+
+if n1.length == n2.length
+    puts "Yes"
+else 
+    puts "No"
+end
