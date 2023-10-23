@@ -54,11 +54,11 @@ greeting("渡辺")
 #引数の範囲をif分に入れていない。引数範囲外の場合の処理が組み込まれていない。
 #区切る条件を理解していない。コードを理解していないというより数学の問題。自分の頭が悪い
 
-#回答
+#解答
 def time(s)
     # 時間、分、秒を計算
     hours = s / 3600
-    minutes = (s % 3600) / 60
+    minutes = (s % 60) / 60
     seconds = s % 60
   
     # フォーマットして出力
@@ -107,7 +107,7 @@ greater(10, 10)   # x == y と出力される
 #             puts 200
 #         elsif  6 <= age && age<= 12
 #             puts 100
-#         else age <= 6
+#         else age < 6
 #             puts "無料"
 #         end
 #     end
@@ -153,7 +153,7 @@ train_fare(5)   # 無料
 # xor(false, true)
 # xor(false, false)
 
-#回答
+#解答
 def xor(x, y)
     if x != y
         puts "true"
