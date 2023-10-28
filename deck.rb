@@ -1,3 +1,5 @@
+require_relative ('card')
+
 SUITS = ['ハート', 'ダイヤ', 'クローバー', 'スペード']
 VALUES = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 
@@ -15,7 +17,7 @@ class Deck
     def initialize_deck
         SUITS.each do |suit|
         VALUES.each do |value|
-            @cards << Card.new(suit, value)
+            @cards <<  Card.new(suit, value)
         end
         end
     end
