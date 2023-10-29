@@ -16,13 +16,22 @@ class Player
     def initialize_hand(card1,card2)
         @hand.add_card(card1)
         puts "あなたの引いたカードは#{card1.suit}の#{card1.value}です。"
-        hand.add_card(card2)
+        @hand.add_card(card2)
         puts "あなたの引いたカードは#{card2.suit}の#{card2.value}です。"
     end
 
+    #手札にカードを追加
     def draw_card(card)
         @hand.add_card(card)
-        puts "あなたの引いたカードは#{card.suit}の#{value}です。"
+        puts "あなたの引いたカードは#{card.suit}の#{card.value}です。"
+    end
+    # 現在の手札の合計スコアを計算
+    def total_score
+        @hand.calculate_points
     end
 
+    # 手札を表示
+    def display_hand
+        puts "あなたの手札: #{hand.display_hand}"
+    end
 end
