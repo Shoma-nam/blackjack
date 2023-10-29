@@ -16,9 +16,9 @@ class Deck
     # デッキの初期化
     def initialize_deck
         SUITS.each do |suit|
-        VALUES.each do |value|
-            @cards <<  Card.new(suit, value)
-        end
+            VALUES.each do |value|
+                @cards <<  Card.new(suit, value)
+            end
         end
     end
 

@@ -2,12 +2,12 @@ class Hand
     attr_reader :cards
 
     def initialize
-        @cards = []
+        @hand_cards = []
     end
 
     # 手札にカードを追加
     def add_card(card)
-        @cards << card
+        @hand_cards << card
     end
 
     # 手札の合計ポイントを計算
@@ -15,7 +15,7 @@ class Hand
         points = 0
         num_aces = 0
 
-        @cards.each do |card|
+        @hand_cards.each do |card|   
         if ['J', 'Q', 'K'].include?(card.value)
             points += 10
         elsif card.value == 'A'
@@ -37,7 +37,7 @@ class Hand
 
     # 手札の表示
     def display_hand
-        hand_str = @cards.map { |card| "#{card.suit}の#{card.value}" }.join(', ')
+        hand_str = @hand_cards.map { |card| "#{card.suit}の#{card.value}" }.join(', ')
         "手札: #{hand_str} (合計ポイント: #{calculate_points})"
     end
 end
